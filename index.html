@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- My style -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Jadwal Imsakiyah Ramadhan 1443 H/ 2022 M </title>
+  </head>
+  <body>
+    <section id="app">
+
+      <div class="decor">
+
+      </div>
+
+      <!-- loading animation -->
+      <div class="loading ">
+        <div class="bouncingBalls">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+        </div>
+        <h4>Loading...</h4>
+      </div>
+
+      <div class="container pb-5">
+        <div class="row my-4">
+          <div class="col text-center mt-3 title">
+            <h1>Jadwal Imsakiyah</h1>
+            <h4 class="text-white"><span class="city">KAB. WAJO</span> PROV. <span class="state">SULAWESI SELATAN</span></h4>
+            <p class="text-white">Ramadhan 1443 H/ 2022 M</p>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3 text-center">
+            <p class="text-white">Pilih Provinsi & Kab/Kota</p>
+          </div>
+          <div class="col-md-4 mb-1">
+            <select class="form-select state-list" aria-label="Default select example" onchange="changeState(this)">
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-select city-list" aria-label="Default select example" onchange="changeCity(this)">
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="table-responsive p-3 rounded">
+              <table class="table  table-bordered text-center">
+                <thead class="text-black ">
+                  <tr>
+                    <th>Ramadhan</th>
+                    <th>Tanggal</th>
+                    <th>Imsyak</th>
+                    <th>Subuh</th>
+                    <th>Dhuha</th>
+                    <th>Dzuhur</th>
+                    <th>Ashar</th>
+                    <th>Maghrib</th>
+                    <th>Isya</th>
+                  </tr>
+                </thead>
+                <tbody class="text-black ">
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

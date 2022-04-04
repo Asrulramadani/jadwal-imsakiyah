@@ -1,0 +1,184 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Sriracha&display=swap");
+
+/* variables */
+:root {
+  /* font family */
+  --header-font: "Sriracha", cursive;
+  --primary-font: "Quicksand", sans-serif;
+
+  /* colors */
+  --primary-color: #072315;
+  --text-color-primary: #ffe600;
+  --loading-color: #47d68f;
+}
+
+/* style */
+body {
+  overflow-x: hidden;
+  font-family: var(--primary-font);
+}
+
+section#app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+.decor {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+}
+
+.decor .star {
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(0);
+  animation: starAnimate 4s linear infinite;
+  -webkit-animation: starAnimate 4s linear infinite;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+@keyframes starAnimate {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1200px);
+    -webkit-transform: translateY(-1200px);
+    -moz-transform: translateY(-1200px);
+    -ms-transform: translateY(-1200px);
+    -o-transform: translateY(-1200px);
+    opacity: 0;
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #072315;
+  z-index: 99;
+}
+
+.bouncingBalls {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bouncingBalls .ball {
+  width: 20px;
+  height: 20px;
+  background-color: var(--loading-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  animation: bouncingBalls 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite
+    alternate;
+  -webkit-animation: bouncingBalls 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98)
+    infinite alternate;
+}
+
+.bouncingBalls .ball:nth-child(2) {
+  opacity: 0.8;
+  animation-delay: 0.1s;
+}
+
+.bouncingBalls .ball:nth-child(3) {
+  opacity: 0.6;
+  animation-delay: 0.2s;
+}
+.bouncingBalls .ball:nth-child(4) {
+  opacity: 0.4;
+  animation-delay: 0.3s;
+}
+
+@keyframes bouncingBalls {
+  from {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  to {
+    transform: translateY(-90px);
+    -webkit-transform: translateY(-90px);
+    -moz-transform: translateY(-90px);
+    -ms-transform: translateY(-90px);
+    -o-transform: translateY(-90px);
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 98;
+}
+
+.table-responsive {
+  background-color:
+    rgba(255, 255, 255, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.551);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+  color: black;
+}
+
+.table-responsive table > * {
+    border-color: black;
+}
+
+.title h1 {
+  font-family: var(--header-font);
+  color: var(--text-color-primary);
+  font-size: 3rem;
+}
+
+.title h4 {
+    font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+@media (max-width: 576px) { 
+  .title h1 {
+    font-size: 2.3rem;
+  }
+  
+  .title h4 {
+      font-size: 1rem;
+  }
+}
+
