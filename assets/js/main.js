@@ -163,31 +163,74 @@ function getDataTime(stateId, cityId) {
     `https://imsakiyah-api.santrikoding.com/imsyakiyah?state=${stateId}&city=${cityId}&year=2022`
   )
     .then((response) => response.json())
-    .then((result) => updateTableList(result.data))
+    .then((result) => renderCard(result.data))
     .catch((e) => console.log(e));
 }
 
 // ================================
-// === function updateTableList ===
+// === function renderCard ===
 // ================================
-function updateTableList(data) {
-  const tableBody = document.querySelector("table tbody");
-  tableBody.innerHTML = "";
+function renderCard(data) {
+  const cardsContainer = document.querySelector(".cards-container");
+  cardsContainer.innerHTML = "";
 
   data.forEach((time, i) => {
-    const newRow = `<tr>
-        <th>${i + 1} <br> Ramadhan 1443H</th>
-        <td>${time.date}</td>
-        <td>${time.imsak}</td>
-        <td>${time.subuh}</td>
-        <td>${time.dhuha}</td>
-        <td>${time.dzuhur}</td>
-        <td>${time.ashar}</td>
-        <td>${time.maghrib}</td>
-        <td>${time.isya}</td>
-        </tr>`;
+    // const newRow = `<tr>
+    //     <th>${i + 1} <br> Ramadhan 1443H</th>
+    //     <td>${time.date}</td>
+    //     <td>${time.imsak}</td>
+    //     <td>${time.subuh}</td>
+    //     <td>${time.dhuha}</td>
+    //     <td>${time.dzuhur}</td>
+    //     <td>${time.ashar}</td>
+    //     <td>${time.maghrib}</td>
+    //     <td>${time.isya}</td>
+    //     </tr>`;
 
-    tableBody.insertAdjacentHTML("beforeend", newRow);
+    const newCard = `
+    <div class="col-10 col-md-4 mb-4">
+            <div class=" card card-time">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold">${i + 1} Ramadhan 1443 H</h5>
+                <h6 class="card-subtitle mb-3">
+                ${time.date}
+                </h6>
+                <div class="row">
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Imsak</p>
+                    <p class="time">${time.imsak}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Subuh</p>
+                    <p class="time">${time.subuh}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Dhuha</p>
+                    <p class="time">${time.dhuha}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Dzuhur</p>
+                    <p class="time">${time.dzuhur}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Ashar</p>
+                    <p class="time">${time.ashar}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Maghrib</p>
+                    <p class="time">${time.maghrib}</p>
+                  </div>
+                  <div class="col-4">
+                    <p class="title-time fw-bold">Isya</p>
+                    <p class="time">${time.isya}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    `;
+
+    cardsContainer.insertAdjacentHTML("beforeend", newCard);
   });
 
   const loading = document.querySelector(".loading");

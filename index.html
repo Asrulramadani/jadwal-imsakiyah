@@ -16,14 +16,11 @@
     <!-- My style -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Jadwal Imsakiyah Ramadhan 1443 H/ 2022 M </title>
+    <title>Jadwal Imsakiyah Ramadhan 1443 H/ 2022 M</title>
   </head>
   <body>
     <section id="app">
-
-      <div class="decor">
-
-      </div>
+      <div class="decor"></div>
 
       <!-- loading animation -->
       <div class="loading ">
@@ -40,46 +37,34 @@
         <div class="row my-4">
           <div class="col text-center mt-3 title">
             <h1>Jadwal Imsakiyah</h1>
-            <h4 class="text-white"><span class="city">KAB. WAJO</span> PROV. <span class="state">SULAWESI SELATAN</span></h4>
+            <h4 class="text-white">
+              <span class="city">KAB. WAJO</span> PROV.
+              <span class="state">SULAWESI SELATAN</span>
+            </h4>
             <p class="text-white">Ramadhan 1443 H/ 2022 M</p>
           </div>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-5">
           <div class="col-md-3 text-center">
             <p class="text-white">Pilih Provinsi & Kab/Kota</p>
           </div>
           <div class="col-md-4 mb-1">
-            <select class="form-select state-list" aria-label="Default select example" onchange="changeState(this)">
-            </select>
+            <select
+              class="form-select state-list"
+              aria-label="Default select example"
+              onchange="changeState(this)"
+            ></select>
           </div>
           <div class="col-md-4">
-            <select class="form-select city-list" aria-label="Default select example" onchange="changeCity(this)">
-            </select>
+            <select
+              class="form-select city-list"
+              aria-label="Default select example"
+              onchange="changeCity(this)"
+            ></select>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="table-responsive p-3 rounded">
-              <table class="table  table-bordered text-center">
-                <thead class="text-black ">
-                  <tr>
-                    <th>Ramadhan</th>
-                    <th>Tanggal</th>
-                    <th>Imsyak</th>
-                    <th>Subuh</th>
-                    <th>Dhuha</th>
-                    <th>Dzuhur</th>
-                    <th>Ashar</th>
-                    <th>Maghrib</th>
-                    <th>Isya</th>
-                  </tr>
-                </thead>
-                <tbody class="text-black ">
-                  
-                </tbody>
-              </table>
-            </div>
-          </div>
+        <div class="row cards-container justify-content-center">
+         
         </div>
       </div>
     </section>
